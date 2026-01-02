@@ -20,10 +20,10 @@ Here we need to check if it is palindrome string or not.
 s="madam"
 r=s[::-s]
 
-is_pal=false
+is_pal=False
 
 if s==r:
-    is_pal=true
+    is_pal=True
     print(is_pal)
 else:
     print(is_pal)
