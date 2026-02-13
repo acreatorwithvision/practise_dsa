@@ -23,11 +23,56 @@ class Queue:
 
 
 """
-Question 2 — Generate Binary Numbers from 1 to N
-
+Q2 — Print elements in queue
 Problem
-For n=5 → output:
 
-1, 10, 11, 100, 101
+Print and empty queue.
 """
 
+from collections import deque
+
+q=deque([1,2,3,4,5])
+
+while q:
+    print(q.popleft())
+
+
+"""
+Q3 — Generate numbers from 1 to N
+Problem
+
+Print 1 to N using queue.
+"""
+
+
+from collections import deque
+
+def generate_numbers(n):
+
+    q=deque(range(1,n+1))
+
+
+    while q:
+        print(q.popleft())
+
+"""
+Reverse first K elements of queue
+Problem
+
+Queue = [1,2,3,4,5]
+k=3
+Result → [3,2,1,4,5]
+"""
+
+from collections import deque
+
+def reversed_number(q,k):
+    stack=[]
+
+    for _ in range(k):
+        stack.append(q.popleft())
+
+    while stack:
+        q.appendleft(stack.pop())
+
+    return q
